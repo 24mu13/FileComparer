@@ -36,9 +36,7 @@
          group as the part of a menu contained between two lines. The parent of a group
          must be a menu. -->
     <Groups>
-      <Group guid="guidCompareFilesCommandPackageCmdSet" id="MyMenuGroup" priority="0x0200">
-        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE"/>
-      </Group>
+      <Group guid="guidCompareFilesCommandPackageCmdSet" id="MyMenuGroup" />
     </Groups>
 
     <!--Buttons section. -->
@@ -72,6 +70,16 @@
     </Bitmaps>
   </Commands>
 
+  <CommandPlacements>
+    <CommandPlacement guid="guidCompareFilesCommandPackageCmdSet" id="MyMenuGroup" priority="0x0200">
+      <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE"/>
+    </CommandPlacement>
+    <CommandPlacement guid="guidCompareFilesCommandPackageCmdSet" id="MyMenuGroup" priority="0x0200">
+      <!-- find the right code for window-tile-only context-menu -->
+      <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN"/>
+    </CommandPlacement>
+  </CommandPlacements>
+      
   <Symbols>
     <!-- This is the package guid. -->
     <GuidSymbol name="guidCompareFilesCommandPackage" value="{32d7fb6e-0f55-407d-8753-64f5205ba2a6}" />
